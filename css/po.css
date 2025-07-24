@@ -8,7 +8,7 @@ html {scroll-behavior: smooth;}
 html, body { font-family: "Noto Sans KR", sans-serif;}
 body {
     min-height:200vh;
-    background-color: #edd5ff;
+    background-color: #ffffbb;
 }
 a {
     text-decoration: none; color:black;
@@ -23,7 +23,7 @@ h2 {
 /* 상단(header) 배경이미지 */
 #top {
     height: 100vh; position: relative;
-    background: url("../images/cho.jpg") no-repeat fixed center center / cover ;
+    background: url("../images/ba1.jpg") no-repeat fixed center center / cover ;
 }
 
 /* 상단메뉴 */
@@ -56,7 +56,7 @@ h2 {
     font-size: 1.7rem;
 }
 #menu a:hover, #menu a:focus , #menu a.act {
-    color:rgb(223, 200, 255);
+    color:rgb(170, 109, 255);
 }
 
 /* 타자치는 효과 */
@@ -113,10 +113,10 @@ h2 {
     padding-bottom: 50px;
 }
 #about h2 {
-    color: rgb(108, 38, 149);
+    color: rgb(66, 157, 255); font-size: 3.5rem;
 }
 #about h3 {
-    padding-bottom: 10px; font-size: 1.8rem;
+    padding-bottom: 10px; font-size: 2.3rem; color: rgb(66, 157, 255);
 }
 #about div {   
     max-width: 1300px; margin:auto;
@@ -127,14 +127,14 @@ h2 {
     width:300px; max-width:60%;
 }
 #about mark {
-    background: rgba(179, 249, 255, 0.752);
+    background: rgb(219, 194, 255);
 }
 #about q {
     display: block; margin: auto; width:fit-content;
     padding:10px 0 70px; font-size: 1.2rem;
 }
 #about p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 #about section {
     flex:1;  padding:10px;
@@ -160,7 +160,7 @@ h2 {
     background:#ffffff; border-radius: 5px; overflow: hidden;
 }
 #skill ::-webkit-progress-value {
-    background:rgb(89, 247, 255);
+    background:rgb(170, 109, 255);
 }
 
 /************************/
@@ -170,7 +170,7 @@ h2 {
     /*background-color: #b3e8fff5;*/
 }
 #portfolio h2 {
-    color: rgb(108, 38, 149);
+    color: rgb(54, 65, 138); font-size: 3.5rem;
 }
 #portfolio section {
     display: flex; min-height:100vh; padding-top:20vh;
@@ -183,39 +183,41 @@ h2 {
 #port1 {
     min-height:70vh; padding-top:0;
 }
+#port1 .right {
+    text-align: right; 
+}
 #port2 {
     min-height:70vh; padding-top:0;
 }
 #portfolio .left {
-    flex:1.1; border: 0px solid red;
-    ;
+    flex:1.1; 
 }
 #portfolio .right {
     flex:1; margin-left:60px;
 }
 #portfolio h3 {
-    font-size:1.8rem; padding-bottom: 20pt;
+    font-size:2.4rem; padding-bottom: 20pt; color: rgb(54, 65, 138);
 }
 #portfolio ul {
     list-style: none; line-height: 200%;
 }
 #portfolio li {
-    display: flex;
+    display: flex; font-size: 1.3rem;
 }
 #portfolio b {
-    flex:1;    
+    flex:1; color: #447cff;   
 }
 #portfolio span {
    flex:5; text-align: justify;
 }
 #portfolio a {
-    padding:5pt 23pt 6pt; border:3px solid #672480e2;
+    padding:5pt 18pt 6pt; border:3px solid #672480e2;
     margin:30pt 2pt 5pt; border-radius: 20pt; display: inline-block;
-    font-weight: 500; font-size:1.1rem;
+    font-weight: 500; font-size:1.2rem;
     transition: 0.5s;
 }
 #portfolio a:hover , #portfolio a:focus {
-    background: #d497ff; color:white;
+    background: rgb(255, 211, 230); color:#80c3ff;
 }
 /*짝수(<section>의 차례 2,4,6,8,,,) */
 #portfolio section:nth-of-type(even) .left  { order: 2; }
@@ -229,7 +231,7 @@ h2 {
     background-color: rgba(188, 112, 255, 0.421);
 }
 #event h2 {
-    color: rgb(108, 38, 149);
+    color: rgb(106, 56, 150);; font-size: 3.5rem;
 }
 #event div {
     display: flex; flex-wrap: wrap; 
@@ -265,14 +267,14 @@ h2 {
 
 /* Contact Us */
 #contact {
-    background: #eee; min-height: 70vh;
+    background: #eee; min-height: 100vh;  padding-bottom:30vh;
 }
 #contact h2 {
-    color: rgb(108, 38, 149);
+    color: rgb(105, 43, 152);
 }
 #contact div {
     display: flex; justify-content: space-between;
-    max-width:600px; margin:auto; margin-top:10vh;
+    max-width:850px; margin:auto; margin-top:10vh;
     text-align: center;
 }
 #contact .fa-solid {
@@ -292,7 +294,12 @@ h2 {
 #contact a {
     font-size: 1.3rem;
 }
-
+#contact section {
+        margin: 0 50px;
+}
+#contact img {
+    width:150px;
+}
 
 
 /* 큰이미지보이기 (팝업모달) */
@@ -363,14 +370,15 @@ h2 {
     #about section {
         padding-bottom: 30px;
     }
-
+   
     #portfolio section {
-        flex-direction: column; padding-top: 10vh; padding: 0 17px;
+        flex-direction: column;
+        padding:0 10px;
     }
    
     #portfolio li {
         flex-direction: column;
-    }
+    }    
     #port2 .right {
         margin-right: 0 !important;
     }
@@ -396,12 +404,14 @@ h2 {
     }
     
     #portfolio section:nth-of-type(odd)  {
-        padding-top: 0;
+        padding: 0 0 50px;
+    }
+    #portfolio section:nth-of-type(even)  {
+        padding: 0 0 50px;
     }
     #portfolio section:nth-of-type(odd) .left {order:2; }
     #portfolio section:nth-of-type(odd) .right {order:1; padding-bottom: 10vh;}
-
-
+    
     #popup img {
        max-width: 90%;
     }
@@ -409,12 +419,17 @@ h2 {
     #contact div {
         flex-direction: column;
     }
+    #contact section:first-child p {
+        padding-bottom:60px;
+    }
     #contact section:last-child {
         padding:10vh 0;
     }
 }
+
 @media ( max-width:500px) {
     #portfolio section {
-    padding: 0 5px;
-    }
+        padding: 0 5px;
+    } 
+
 }
